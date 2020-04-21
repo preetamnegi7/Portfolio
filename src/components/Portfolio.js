@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   cardContainer: {
     maxWidth: 345,
     margin: "3rem auto",
-    height: "460px",
+    height: "450px",
   },
   cardContainerSkills: {
     maxWidth: "100%",
@@ -93,15 +93,12 @@ const Portfolio = () => {
                   experience - 7 years
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  <p>
-                    Modelling: Parametric and Non Parametric, AAX Advance
-                    Assembly,BMX Behraviour Modelling, Sheetmetal, ISDX
-                    Surfacing, Mold Design, Import Data Doctor, Reverse
-                    Engineering, Advance Framework Works,Detailing and MBD.
-                    Analysis : kinematic and dynamic, FEM Thermal & CFD,
-                    Multibody, Topology optmization, AR
-                  </p>
-                  <p>Delivered training in more then 30 companies</p>
+                  Parametric and Non Parametric modelling, Advance Assembly,BMX
+                  Behraviour Modelling, Sheetmetal, ISDX Surfacing, Mold Design,
+                  Reverse Engineering, Advance Framework Works, Detailing and
+                  MBD. Analysis : kinematic and dynamic, FEM Thermal & CFD,
+                  Multibody, Topology optmization, AR. Delivered training in
+                  more then 30 Companies.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -304,7 +301,6 @@ const Portfolio = () => {
                   <br></br>
                   <br></br>
                   <br></br>
-                  <br></br>
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -416,7 +412,6 @@ const Portfolio = () => {
                   Experience of modelling and simulation of processes, use of
                   basic as well as advance tools. how to animated the production
                   process, understanding of workflow and modules.
-                  <br></br>
                   <br></br>
                   <br></br>
                   <br></br>
