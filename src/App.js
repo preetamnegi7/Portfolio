@@ -4,9 +4,10 @@ import { CssBaseline } from "@material-ui/core";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
 import { Route } from "react-router-dom";
-import Contacts from "./components/Contacts";
+
 import "./components/App.css";
 import mySkills from "./components/mySkills";
+import MyForm from "./components/myForm";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
       <Route exact path="/" component={Home} />
       <Route path="/resume" component={Resume} />
       <Route path="/portfolio" component={Portfolio} />
-      <Route path="/contacts" component={Contacts} />
+      <Route path="/contacts" component={MyForm} />
     </>
   );
 };

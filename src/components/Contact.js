@@ -43,7 +43,7 @@ const InputField = withStyles({
   },
 })(TextField);
 
-const Contacts = () => {
+const MyForm = () => {
   const classes = useStyles();
   return (
     <Box component="div" style={{ background: "#233", height: "100vh" }}>
@@ -102,4 +102,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default MyForm;
