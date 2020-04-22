@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Typography, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -110,7 +111,7 @@ const Resume = () => {
   return (
     <>
       <Navbar />
-      <Box component="header" className={classes.mainContainer}>
+      <Container component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
           working experience
         </Typography>
@@ -193,7 +194,7 @@ const Resume = () => {
               align="right"
               style={{ color: "grey", textTransform: "uppercase" }}
             >
-              VIRIGINIC LLC
+              VIRIGINIC LLC (AUG 2019 - DEC 2019)
             </Typography>
             <Typography
               variant="subtitle1"
@@ -423,7 +424,7 @@ const Resume = () => {
             </Typography>
           </Box>
         </Box>
-      </Box>
+      </Container>
     </>
   );
 };

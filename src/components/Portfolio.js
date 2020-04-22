@@ -16,7 +16,6 @@ import Navbar from "./Navbar";
 import project1 from "../images/html-css-javascript-lg.jpg";
 import project2 from "../images/react-redux.jpg";
 import project3 from "../images/reactjs.png";
-
 import project5 from "../images/ptcCreo.jpg";
 import project6 from "../images/autocad.png";
 import project7 from "../images/solidEdge.jpg";
