@@ -8,24 +8,27 @@ import Button from "@material-ui/core/Button";
 import Navbar from "./Navbar";
 import meraCV from "./cv.png";
 import SaveIcon from "@material-ui/icons/Save";
-import { Divider, Grid } from "@material-ui/core";
+import { Divider, Grid, Container } from "@material-ui/core";
+import { Block } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   root: {
     margin: "7rem auto",
-    width: "1260px auto",
-    height: "1880px auto",
     borderRadius: "8px",
-    maxWidth: "100%",
+
     backgroundColor: "lightgrey",
     textTransform: "uppercase",
   },
-  media: { height: "1420px" },
+  media: {
+    height: "83rem",
+    width: "100%",
+  },
   downlo: {
     color: "white",
     backgroundColor: "#505051",
     position: "center",
-    objectFit: "cover",
+    margin: "auto",
+    height: "100%",
   },
 });
 
@@ -36,23 +39,32 @@ export default function MediaCard() {
     <>
       <Navbar />
       <Divider />
-      <Grid item xs-12 sm-12 xl-12 md-12 justify="center">
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia className={classes.media} image={meraCV} />
-          </CardActionArea>
-          <CardActions>
-            <Button
-              size="small"
-              className={classes.downlo}
-              variant="contained"
-              startIcon={<SaveIcon />}
-              href="https://github.com/preetamnegi7/Portfolio/raw/master/src/cv.pdf"
-            >
-              Download Resume
-            </Button>
-          </CardActions>
-        </Card>
+      <Grid
+        container
+        spacing={5}
+        margin=" rem"
+        direction="row"
+        justify="space-evenly"
+        alignContent="center"
+      >
+        <Grid item xs={11} sm={11} xl={6} md={11} position="center">
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia className={classes.media} image={meraCV} />
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size="small"
+                className={classes.downlo}
+                variant="contained"
+                startIcon={<SaveIcon />}
+                href="https://github.com/preetamnegi7/Portfolio/raw/master/src/cv.pdf"
+              >
+                Download Resume
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
       </Grid>
     </>
   );
