@@ -46,7 +46,7 @@ const InputField = withStyles({
 const MyForm = () => {
   const classes = useStyles();
   return (
-    <Box component="div" style={{ background: "#233", height: "100vh" }}>
+    <Box component="div" style={{ background: "#253A4B", height: "100vh" }}>
       <Navbar />
       <Grid container justify="center">
         <Box component="form" className={classes.form}>

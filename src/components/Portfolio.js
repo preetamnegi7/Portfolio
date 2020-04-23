@@ -46,8 +46,17 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContainerSkills: {
     maxWidth: "100%",
-    margin: "3rem auto",
-    padding: "1rem",
+    marginTop: "4rem",
+    padding: "3rem",
+    backgroundColor: "#253A4B",
+    textTransform: "uppercase",
+    top: "30%",
+    left: "50%",
+  },
+  cardContainerSkills2: {
+    maxWidth: "100%",
+    marginTop: "4rem",
+    padding: "3rem",
     backgroundColor: "#253A4B",
     textTransform: "uppercase",
     top: "30%",
@@ -69,7 +78,6 @@ const Portfolio = () => {
       <Typography
         variant="h3"
         style={{ color: "white" }}
-        textAlign="center"
         align="center"
         className={classes.cardContainerSkills}
       >
@@ -482,7 +490,7 @@ const Portfolio = () => {
         style={{ color: "white" }}
         textAlign="center"
         align="center"
-        className={classes.cardContainerSkills}
+        className={classes.cardContainerSkills2}
       >
         Web Development
       </Typography>

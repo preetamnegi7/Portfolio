@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   negi: {
     width: theme.spacing(13),
     height: theme.spacing(13),
+    margin: theme.spacing(1),
   },
   title: {
     color: "white",

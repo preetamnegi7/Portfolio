@@ -22,6 +22,7 @@ import {
   Apps,
   ContactMail,
   Menu,
+  Description,
 } from "@material-ui/icons";
 
 import avatar from "./Pritam.jpg";
@@ -39,6 +40,15 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(13),
     height: theme.spacing(13),
   },
+  root: {
+    flexGrow: 1,
+    position: "relative",
+  },
+
+  homebutton: {
+    position: "absolute",
+    right: "25px",
+  },
 }));
 
 const menuItems = [
@@ -49,15 +59,20 @@ const menuItems = [
   },
   {
     listIcon: <AssignmentInd />,
-    listText: "Resume",
+    listText: "My Timeline",
     listPath: "/resume",
   },
   {
     listIcon: <Apps />,
-    listText: "Portfolio",
+    listText: "My Skills",
     listPath: "/portfolio",
   },
 
+  {
+    listIcon: <Description />,
+    listText: "Curriculum Vitae",
+    listPath: "/cv",
+  },
   {
     listIcon: <ContactMail />,
     listText: "Contacts",
@@ -66,7 +81,7 @@ const menuItems = [
 ];
 
 const Navbar = () => {
-  const [state, setState] = useState({ right: false });
+  const [state, setState] = useState({ left: false });
 
   const toggleSlider = (slider, open) => () => {
     setState({ ...state, [slider]: open });
@@ -102,25 +117,28 @@ const Navbar = () => {
     </Box>
   );
   return (
-    <Box component="nav">
-      <AppBar position="static" style={{ background: "#253a4b" }}>
+    <div className={classes.root}>
+      <AppBar position="fixed" style={{ background: "#253a4b" }}>
         <Toolbar>
-          <IconButton onClick={toggleSlider("right", true)}>
+          <IconButton onClick={toggleSlider("left", true)}>
             <Menu style={{ color: "white" }} />
           </IconButton>
 
           <Typography variant="h5"> My Portfolio</Typography>
           <MobileRightMenuSlider
-            anchor="right"
-            open={state.right}
-            onClose={toggleSlider("right", false)}
+            anchor="left"
+            open={state.left}
+            onClose={toggleSlider("left", false)}
           >
-            {sideList("right")}
+            {sideList("left")}
             <Footer />
           </MobileRightMenuSlider>
+          <IconButton className={classes.homebutton} component={Link} to={"/"}>
+            <Home style={{ color: "white" }} />
+          </IconButton>
         </Toolbar>
       </AppBar>
-    </Box>
+    </div>
   );
 };
 

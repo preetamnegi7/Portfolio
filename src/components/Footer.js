@@ -23,6 +23,7 @@ const useStyles = makeStyles({
 
 const Footer = () => {
   const classes = useStyles();
+
   return (
     <div>
       <BottomNavigation
@@ -33,17 +34,23 @@ const Footer = () => {
           className={classes.root}
           style={{ padding: 0 }}
           icon={<Facebook />}
-        />
+          href="https://www.facebook.com/Learn-Designing-CAD-851114908569816"
+          target="_blank"
+        ></BottomNavigationAction>
 
         <BottomNavigationAction
           className={classes.root}
           style={{ padding: 0 }}
           icon={<Youtube />}
+          href="https://www.youtube.com/channel/UCB83K7FgWgUnzITJ5PPU85A"
+          target="_blank"
         />
         <BottomNavigationAction
           className={classes.root}
           style={{ padding: 0 }}
           icon={<LinkedIn />}
+          href="https://www.linkedin.com/in/pritamnegi7/"
+          target="_blank"
         />
       </BottomNavigation>
     </div>

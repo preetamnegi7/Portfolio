@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Typography, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -34,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
       "&:nth-of-type(2n)": {
         float: "right",
         margin: "1rem",
-        borderColor: "grey",
+        borderColor: "tan",
       },
       "&:nth-of-type(2n):before": {
         right: "auto",
@@ -98,6 +97,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     padding: "3rem 0",
     textTransform: "uppercase",
+    maxWidth: "100%",
+    marginTop: "4rem",
   },
   subHeading: {
     color: "white",
@@ -111,7 +112,7 @@ const Resume = () => {
   return (
     <>
       <Navbar />
-      <Container component="header" className={classes.mainContainer}>
+      <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>
           working experience
         </Typography>
@@ -424,7 +425,7 @@ const Resume = () => {
             </Typography>
           </Box>
         </Box>
-      </Container>
+      </Box>
     </>
   );
 };
