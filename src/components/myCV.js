@@ -8,22 +8,24 @@ import Button from "@material-ui/core/Button";
 import Navbar from "./Navbar";
 import meraCV from "./cv.png";
 import SaveIcon from "@material-ui/icons/Save";
-import { Divider } from "@material-ui/core";
+import { Divider, Grid } from "@material-ui/core";
+
 const useStyles = makeStyles({
   root: {
     margin: "7rem auto",
-    width: "1260px",
-    height: "1880px",
+    width: "1260px auto",
+    height: "1880px auto",
     borderRadius: "8px",
     maxWidth: "100%",
     backgroundColor: "lightgrey",
     textTransform: "uppercase",
   },
-  media: { height: 1810 },
+  media: { height: "1420px" },
   downlo: {
     color: "white",
     backgroundColor: "#505051",
     position: "center",
+    objectFit: "cover",
   },
 });
 
@@ -34,22 +36,24 @@ export default function MediaCard() {
     <>
       <Navbar />
       <Divider />
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia className={classes.media} image={meraCV} />
-        </CardActionArea>
-        <CardActions>
-          <Button
-            size="small"
-            className={classes.downlo}
-            variant="contained"
-            startIcon={<SaveIcon />}
-            href="https://github.com/preetamnegi7/Portfolio/raw/master/src/cv.pdf"
-          >
-            Download Resume
-          </Button>
-        </CardActions>
-      </Card>
+      <Grid item xs-12 sm-12 xl-12 md-12 justify="center">
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia className={classes.media} image={meraCV} />
+          </CardActionArea>
+          <CardActions>
+            <Button
+              size="small"
+              className={classes.downlo}
+              variant="contained"
+              startIcon={<SaveIcon />}
+              href="https://github.com/preetamnegi7/Portfolio/raw/master/src/cv.pdf"
+            >
+              Download Resume
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
     </>
   );
 }
